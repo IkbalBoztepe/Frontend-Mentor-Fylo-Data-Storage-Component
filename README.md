@@ -2,6 +2,9 @@
 
 ![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)
 
+This is the Github Page Link:  
+https://ikbalboztepe.github.io/Frontend-Mentor-Fylo-Data-Storage-Component/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
