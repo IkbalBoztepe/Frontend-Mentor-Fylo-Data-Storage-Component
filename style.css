@@ -1,0 +1,200 @@
+:root {
+    --gradient1:hsl(6, 100%, 80%) ;
+    --gradient2:hsl(335, 100%, 65%);
+    --paleblue: hsl(243, 100%, 93%);
+    --grayishblue:hsl(229, 7%, 55%);
+    --darkblue : hsl(228, 56%, 26%);
+    --verydarkblue:hsl(229, 57%, 11%);
+    --main-font-size: 14px;
+    --font-family: 'Raleway', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 1.6rem;
+}
+.card {
+    background-color: var(--darkblue);
+    width: 85%;
+    border-radius: 1rem;
+}
+.card-logo {
+    padding: 2.2rem;
+    border-top-right-radius: 90px;
+}
+.h-box-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1.1rem;
+    margin-top: 25px;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem;
+    background-color: var(--verydarkblue);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.article {
+    color: var(--paleblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: var(--main-font-size);
+}
+.progress-bar {
+    background-color: var(--verydarkblue);
+    height: 19px;
+    margin: 15px 25px 9px 25px;
+    border-radius: 25px;
+    border-style: solid;    
+}
+.progress-bar-color {
+    border-radius: 25px;
+    width: 75%;
+    height: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.ball {
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: var(--paleblue);
+    border-radius: 50%;
+}
+.h-box-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px;
+    color: var(--paleblue);
+    font-size: var(--main-font-size);
+}
+.last-box {
+    background-color: #fff;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+.msg {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 17px;
+    gap: 5px;
+}
+.msg strong {
+    font-size: 40px;
+
+}
+.msg span {
+    color: var(--grayishblue);
+    font-weight: 700;
+    padding-top: 5px;
+    padding-left: 7px;
+    font-size: 13px;
+    
+}
+.last-card {
+    position: relative;
+    padding-bottom: 63px;
+}
+
+@media screen and (min-width:1440px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-size: unset;
+        background-position-y: bottom;
+        background-color: var(--verydarkblue);
+   
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-left: 18%;
+        width: 65%;
+        gap: 2rem;
+    }
+    .card-logo {
+        width: 38%;
+    }
+    .last-card {
+        width: 72%;
+    }
+    .article {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 28px;
+        padding-bottom: 3px;
+    }
+    .article > strong {
+        padding: 0 3px;
+    }
+    .msg {
+        left: 0;
+        border-bottom-right-radius: 0;
+    }
+    .last-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        left: unset;
+        right: -3rem ;
+        top: -50%;
+        border-bottom-right-radius: 0;
+    }
+    .last-box > .triangle {
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        width: 0;
+        height: 0;
+        border-right: 10px solid white ;
+        border-top: 10px solid white;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    .progress-bar {
+        margin-right: 40px;
+        height: 22px;
+    }
+    .progress-bar-color {
+        height: 15px;
+    }
+    .h-box-2 {
+        margin: 0 39px 0 25px
+    }
+}
